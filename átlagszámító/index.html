@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Ez egy szar</title>
+    <style>
+        label, input {
+            margin: 5px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Faszom számítása</h2>
+    <form id="subjectForm">
+        <label for="subjectName">Faszom neve:</label>
+        <input type="text" id="subjectName" required>
+        <label for="credits">Faszom kredite:</label>
+        <input type="number" id="credits" required min="1">
+        <label for="grade">Faszályzat:</label>
+        <input type="number" id="grade" required min="1" max="5">
+        <button type="button" onclick="addSubject()">Faszozás</button>
+    </form>
+
+    <h3>Felvett Faszok</h3>
+    <table id="subjectsTable">
+        <thead>
+            <tr>
+                <th>Faszom neve</th>
+                <th>Faszom kredite</th>
+                <th>Faszályzat</th>
+                <th>Antifasz</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h3>PÉNISZ</h3>
+    <p>Faszom összes kredite: <span id="totalCredits">0</span></p>
+    <p>Faszlag: <span id="average">0.00</span></p>
+    <p>Felvett Faszok száma: <span id="subjectCount">0</span></p>
+
+    <!-- JavaScript fájl beillesztése -->
+    <script src="app.js"></script>
+</body>
+</html>
